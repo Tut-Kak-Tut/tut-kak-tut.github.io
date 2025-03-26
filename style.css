@@ -1,0 +1,24 @@
+:root{
+    --color-text: azure;
+    --bg-color: rgb(8, 8, 8);
+    --bg-color-tikets: rgb(44, 44, 44);
+}
+
+body{
+    margin: 0;
+    background-color: var(--bg-color);
+}
+.a-none{
+    text-decoration: none;
+    color: azure;
+}
+.container{
+    margin: 0 2rem;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--bg-color-tikets);
+    padding: 1rem;
+    border-radius: 20px;
+}
