@@ -1,7 +1,9 @@
 :root{
     --color-text: azure;
     --bg-color: rgb(8, 8, 8);
-    --bg-color-tikets: rgb(44, 44, 44);
+    --bg-color-tiket: rgb(44, 44, 44);
+    --box-sh-tiket: rgb(60, 60, 60) 8px 8px;
+    --box-sh-tiket-hv: rgb(60, 60, 60) 15px 15px; 
 }
 
 body{
@@ -14,12 +16,12 @@ body{
     color: azure;
 }
 .container{
-    margin: 0 2rem;
+    margin: 0 4rem;
 }
 nav{
     display: flex;
     justify-content: space-around;
-    background-color: var(--bg-color-tikets);
+    background-color: var(--bg-color-tiket);
     padding: 1rem;
     border-radius: 20px;
 }
@@ -28,6 +30,10 @@ main{
     justify-content: center;
     grid-template-columns: auto;
 }
+nav > a:hover{
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+}
 
 .tikets{
     display: flex;
@@ -35,8 +41,14 @@ main{
     justify-content: center;
 }
 .tiket{
-    background-color: var(--bg-color-tikets);
+    background-color: var(--bg-color-tiket);
     border-radius: 20px;
     padding: 1rem;
     margin: 1rem 0;
+
+    box-shadow: var(--box-sh-tiket);
+    transition: all 0.3s;
+}
+.tiket:hover{
+    box-shadow: var(--box-sh-tiket-hv);
 }
